@@ -1,0 +1,20 @@
+server:
+    port: 8083
+    context-path: /ui2
+    session:
+      cookie:
+        name: UI2SESSION
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: SampleClientId
+      clientSecret: secret
+      accessTokenUri: http://spring-security-sso-auth-server-sso-auth-server.origin.cloudmaf.io/auth/oauth/token
+      userAuthorizationUri: http://spring-security-sso-auth-server-sso-auth-server.origin.cloudmaf.io/auth/oauth/authorize
+    resource:
+      userInfoUri: http://spring-security-sso-auth-server-sso-auth-server.origin.cloudmaf.io/auth/user/me
+spring:
+  thymeleaf:
+    cache: false 
